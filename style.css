@@ -14,13 +14,64 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+	background: #f7f8f8; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#acbb78,
+		#f7f8f8
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#acbb78,
+		#f7f8f8
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+}
+
+.navbar {
+}
+
+.navbar .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar img {
+	width: 126px;
+}
+
+.navbar .main-menu ul {
+	display: flex;
+}
+
+.navbar ul li a {
+	padding: 10px 20px;
+	font-weight: 600;
+	transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+	color: var(--primary-color);
 }
 
 /* Utility Classes */
 .container {
 	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .container-sm {
 	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
