@@ -46,9 +46,10 @@ ul {
 	padding: 10px 20px;
 	margin: 0 6px;
 	display: block;
-	font-weight: 600;
+	font-weight: 500;
 	/* transition: 0.5s; */
 	position: relative;
+	font-size: 18px;
 }
 
 .navbar ul li a::after {
@@ -67,12 +68,6 @@ ul {
 	width: 80%;
 }
 
-/* .navbar ul li a:hover {
-	background-color: var(--primary-color);
-	color: white;
-	border-radius: 4px;
-} */
-
 .navbar ul li i {
 	margin-right: 8px;
 }
@@ -88,10 +83,10 @@ ul {
 }
 
 .hero .container {
-	background: url("../images/hero-bg.png") no-repeat;
+	/* background: url("../images/hero-bg.png") no-repeat;
 	background-size: contain;
 	background-position: right;
-	height: 450px;
+	height: 450px; */
 }
 
 .hero .hero-content {
@@ -128,6 +123,12 @@ ul {
 
 .services .card p {
 	text-align: center;
+}
+
+.services .card .btn {
+	text-align: center;
+	margin: 12px 0;
+	width: 100%;
 }
 
 /* Testinomials */
