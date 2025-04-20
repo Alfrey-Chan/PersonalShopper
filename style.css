@@ -139,7 +139,6 @@ ul {
 .testinomials .container {
 	display: flex;
 	align-items: center;
-	margin-bottom: 4.2rem;
 }
 
 .testinomial-cards {
@@ -160,6 +159,7 @@ ul {
 
 /* Newsletter */
 .newsletter {
+    margin: 56px 0;
 	text-align: center;
 	padding: 3rem 1rem;
 	/* background-color: var(--primary-color); */
