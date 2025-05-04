@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div id="navbar-placeholder"></div>
+
+		<section class="snack-service-details">
+			<div class="container">
+				<div class="snack-gallery">
+					<div class="gallery-side-panel">
+						<img class="gallery-thumb selected" src="images/snack.jpg" alt="snack photo" />
+						<img class="gallery-thumb" src="images/snack2.jpg" alt="snack photo" />
+						<img class="gallery-thumb" src="images/snack3.jpg" alt="snack photo" />
+						<img class="gallery-thumb" src="images/snack4.jpg" alt="snack photo" />
+					</div>
+
+					<img
+						src="images/snack.jpg"
+						alt="snack photo"
+						class="current-image"
+					/>
+				</div>
+
+				<div class="snack-info-section">
+					<h2 class="snack-info-section__heading text-xxl">Snack Set</h2>
+					<p class="snack-info-section__price">$75</p>
+					<div class="total-stars-container">
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<p class="average-rating">(4.5 stars) · 10 reviews</p>
+					</div>
+
+					<p class="snack-info-section__type-of-snacks-description">
+						Customize with the options below, or specifically request specific
+						items (however cannot guarantee), or leave it all up to us and we'll
+						carefully hand-pick Japanese authentic snacks for you!
+					</p>
+
+					<div class="customization-section">
+						<p>Selection</p>
+						<div class="button-group">
+							<button type="button" class="snack-selection-btn selected">Mix</button>
+							<button type="button" class="snack-selection-btn">Sweet</button>
+							<button type="button" class="snack-selection-btn">Savoury</button>
+						</div>
+					</div>
+
+					<div class="quantity-selector">
+						<button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+						<span id="quantity">1</span>
+						<button class="quantity-btn" onclick="increaseQuantity()">+</button>
+					</div>
+					<button class="add-to-cart-btn">ADD TO CART</button>
+
+					<div class="tab-container">
+						<div class="tab-buttons">
+						  <button class="tab-btn selected" data-tab="details">Details</button>
+						  <button class="tab-btn" data-tab="shipping">Shipping</button>
+						  <button class="tab-btn" data-tab="returns">Returns</button>
+						</div>
+					  
+						<div class="tab-content" id="details">
+						  <p>Our Japanese Delights snack set includes a variety of popular snacks from Japan...</p>
+						</div>
+						<div class="tab-content" id="shipping" style="display: none;">
+						  <p>Shipping takes 5–7 business days. International shipping available.</p>
+						</div>
+						<div class="tab-content" id="returns" style="display: none;">
+						  <p>Returns accepted within 14 days in original condition.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="footer-placeholder"></div>
+
+		<script src="js/navbar.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="js/snack.js"></script>
+	</body>
+</html>
