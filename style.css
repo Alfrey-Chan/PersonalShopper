@@ -212,6 +212,7 @@ ul {
 /* Snack Page */
 .snack-service-details .container {
 	display: flex;
+	justify-content: space-between;
 }
 
 .snack-gallery {
@@ -233,9 +234,13 @@ ul {
 	object-fit: cover;
 }
 
+.snack-info-section__heading {
+	margin-top: 0 !important;
+}
+
 .current-image {
 	border-radius: 16px;
-	width: 75%;
+	width: 100%;
 	height: 70%;
 }
 
@@ -249,8 +254,12 @@ ul {
 	border-color: var(--primary-color); /* or use #b2534a if no var */
 }
 
+.carousel-controls {
+	display: none;
+}
+
 .snack-info-section {
-	width: 50%;
+	width: 45%;
 }
 
 .total-stars-container {
@@ -363,7 +372,7 @@ ul {
 	gap: 1rem;
 	margin-bottom: 1rem;
 }
-  
+
 .tab-btn {
 	background: none;
 	border: none;
@@ -373,7 +382,7 @@ ul {
 	border-bottom: 2px solid transparent;
 	font-weight: 500;
 }
-  
+
 .tab-btn.selected {
 	border-color: #111; /* underline color */
 }
@@ -490,5 +499,52 @@ ul {
 	.newsletter-form button {
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
+	}
+}
+
+@media (max-width: 1350px) {
+	.snack-service-details .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.gallery-side-panel {
+		display: none;
+	}
+	.container,
+	.snack-gallery {
+		width: 85%;
+		max-width: 100%;
+	}
+
+	.current-image {
+		/* border-radius: 0; */
+		height: 625px;
+	}
+
+	.carousel-controls {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+		gap: 1rem;
+	}
+
+	.carousel-controls > :first-child,
+	.carousel-controls > :last-child {
+		margin: 0 2rem;
+		cursor: pointer;
+	}
+
+	.dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 1px solid #ccc;
+		transition: background-color 0.3s;
+		cursor: pointer;
+	}
+
+	.dot.active {
+		background-color: black;
 	}
 }

@@ -49,3 +49,41 @@ tabButtons.forEach((button) => {
 		});
 	});
 });
+
+function updateImage(index) {
+	currentImage.src = imageSources[index];
+	imgIndexDots.forEach((dot) => dot.classList.remove("active"));
+	imgIndexDots[index].classList.add("active");
+}
+
+const prevImg = document.querySelector(".prevImage");
+const nextImg = document.querySelector(".nextImage");
+const imgIndexDots = document.querySelectorAll(".dot");
+const imageSources = [
+	"images/snack.jpg",
+	"images/snack2.jpg",
+	"images/snack3.jpg",
+	"images/snack4.jpg",
+];
+let currentIndex = 0;
+
+prevImg.addEventListener("click", () => {
+	if (currentIndex - 1 >= 0) {
+		currentIndex -= 1;
+		updateImage(currentIndex);
+	}
+});
+
+nextImg.addEventListener("click", () => {
+	if (currentIndex + 1 < imageSources.length) {
+		currentIndex += 1;
+		updateImage(currentIndex);
+	}
+});
+
+imgIndexDots.forEach((dot) => {
+	dot.addEventListener("click", () => {
+		currentIndex = parseInt(dot.getAttribute("data-index"));
+		updateImage(currentIndex);
+	});
+});
