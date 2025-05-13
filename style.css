@@ -202,6 +202,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	gap: 14px;
+	margin-top: 2rem;
 }
 
 .footer .copyright {
@@ -516,19 +517,25 @@ ul {
 	}
 	.container,
 	.snack-gallery {
-		width: 85%;
+		width: 100%;
 		max-width: 100%;
+		padding: 0;
 	}
 
 	.current-image {
 		/* border-radius: 0; */
+		position: relative;
+		left: 0;
+		/* transform: translateX(-50%); */
 		height: 625px;
+		width: 100vw;
 	}
 
 	.carousel-controls {
 		display: flex;
 		align-items: center;
-		margin-top: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 4.6rem;
 		gap: 1rem;
 	}
 
@@ -549,5 +556,25 @@ ul {
 
 	.dot.active {
 		background-color: black;
+	}
+
+	.snack-info-section {
+	}
+
+	.snack-info-section__heading {
+		text-align: center;
+		font-weight: 500;
+	}
+
+	.snack-info-section__price {
+		text-align: center;
+		font-size: 2em;
+		padding-bottom: 28px;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.tab-container {
+		margin-top: 2rem;
 	}
 }
