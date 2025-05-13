@@ -26,57 +26,6 @@ ul {
 	list-style: none;
 }
 
-.navbar {
-	margin: 0 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.navbar img {
-	width: 160px;
-}
-
-.navbar .main-menu ul {
-	display: flex;
-}
-
-.navbar ul li a {
-	color: var(--primary-color);
-	padding: 10px 20px;
-	margin: 0 6px;
-	display: block;
-	font-weight: 500;
-	/* transition: 0.5s; */
-	position: relative;
-	font-size: 18px;
-}
-
-.navbar ul li a::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	bottom: 0px;
-	width: 0;
-	height: 2px;
-	background-color: var(--primary-color);
-	transform: translateX(-50%);
-	transition: width 0.5s;
-}
-
-.navbar ul li a:hover::after {
-	width: 80%;
-}
-
-.navbar ul li i {
-	margin-right: 8px;
-}
-
-.navbar .login,
-.navbar .cart {
-	margin-left: 10px;
-}
-
 /* Hero */
 .hero {
 	margin-bottom: 100px;
@@ -195,19 +144,6 @@ ul {
 
 .newsletter-form button:hover {
 	background-color: #993e38;
-}
-
-/* Footer */
-.footer .container .footer-links {
-	display: flex;
-	justify-content: center;
-	gap: 14px;
-	margin-top: 2rem;
-}
-
-.footer .copyright {
-	padding: 0.75rem;
-	justify-self: center;
 }
 
 /* Snack Page */
@@ -395,7 +331,148 @@ ul {
 	margin-left: 0.45rem;
 }
 
-/* Utility Classes */
+/* ===========================
+/  Component Classes
+/  =========================== */
+
+/* Footer */
+.footer .container .footer-links {
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+	margin-top: 2rem;
+}
+
+.footer .copyright {
+	padding: 0.75rem;
+	justify-self: center;
+}
+
+/* Navbar */
+.navbar {
+	margin: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar img {
+	width: 160px;
+}
+
+.navbar .main-menu ul {
+	display: flex;
+}
+
+.navbar ul li a {
+	color: var(--primary-color);
+	padding: 10px 20px;
+	margin: 0 6px;
+	display: block;
+	font-weight: 500;
+	/* transition: 0.5s; */
+	position: relative;
+	font-size: 18px;
+}
+
+.navbar ul li a::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	width: 0;
+	height: 2px;
+	background-color: var(--primary-color);
+	transform: translateX(-50%);
+	transition: width 0.5s;
+}
+
+.navbar ul li a:hover::after {
+	width: 80%;
+}
+
+.navbar ul li i {
+	margin-right: 8px;
+}
+
+.navbar .login,
+.navbar .cart {
+	margin-left: 10px;
+}
+
+/* Cart Menu */
+.cart-menu {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 350px;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+	transition: right 0.6s ease-in-out;
+	z-index: 9999;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cart-menu-open {
+	right: 0;
+}
+
+.cart-menu-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px #ccc solid;
+	padding: 1.2rem;
+}
+
+.cart-menu__title {
+	font-weight: 600;
+	letter-spacing: 0.18em;
+}
+
+.empty-cart {
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+}
+
+.close-cart-btn {
+	background: none;
+	border: none;
+	padding: 0.8rem;
+}
+
+.cart-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+	z-index: 9990; 
+}
+
+.cart-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* ===========================
+/  Utility Classes
+/  =========================== */
 .container {
 	max-width: 90%;
 	margin: 0 auto;
