@@ -446,6 +446,41 @@ ul {
 	letter-spacing: 0.18em;
 }
 
+.cart-menu__checkout {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1.6rem;
+	letter-spacing: 0.18em;
+	background: none;
+	border-left: none;
+	border-right: none;
+	cursor: pointer;
+}
+
+.remove-btn {
+	background: none;
+	border: none;
+	border-bottom: solid 1px #333;
+	color: #333;
+	font-weight: bold;
+	font-size: 0.6em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 0;
+	margin-left: 0.8rem;
+}
+
+.cart-item {
+	display: flex;
+}
+
+.cart-total {
+	margin-left: 0.8rem;
+}
+
 .close-cart-btn {
 	background: none;
 	border: none;
@@ -462,7 +497,7 @@ ul {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s ease;
-	z-index: 9990; 
+	z-index: 9990;
 }
 
 .cart-overlay.active {
